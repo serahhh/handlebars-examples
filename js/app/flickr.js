@@ -16,8 +16,6 @@ define(function (require) {
 
         callback = function (deferred, data) {
             if (data && data.stat === "ok") {
-                this.photoData = data.photos;
-
                 deferred.resolve(_getPhotoSrcURL(data.photos.photo[0]));
             } else {
                 deferred.reject('Error loading photos.');
