@@ -1,0 +1,9 @@
+{
+  "name": "handlebars-examples",
+  "description": "Small app to show different functionalities of Handlebars.js library. Created for interview at MOO.com.",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x"
+  }
+}

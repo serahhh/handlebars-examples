@@ -1,0 +1,8 @@
+<div class="nav">
+    <ol>
+        {{#each examples}}
+            <li class="example {{#isActiveId ../activeId id}}active{{/isActiveId}}" data-role="example" data-id="{{id}}"><a href="#">{{name}}</a></li>
+        {{/each}}
+    </ol>
+    <button class="btn" data-role="submit">Go!</button>
+</div>

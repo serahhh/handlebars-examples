@@ -1,0 +1,122 @@
+{
+    "examples": [
+        {
+            "id": 1,
+            "name": "Basics",
+            "description": "Learning the basics of Handlebars.js",
+            "template": "<h1>Hello {{thing}}!</h1>",
+            "context": {
+                "thing": "world"
+            }
+        },
+        {
+            "id": 3,
+            "name": "If/else",
+            "description": "Flow control",
+            "template": "{{#if somethingWentWrong}}\r  <h1 class=\"error\">Uh oh: {{errorMessage}}</h1>\r{{else}}\r  <h1>All cool here!</h1>\r{{/if}}\r\r",
+            "context": {
+                "somethingWentWrong": true,
+                "errorMessage": "Something happened"
+            },
+            "altContext": {
+                "somethingWentWrong": false
+            }
+        },
+        {
+            "id": 2,
+            "name": "Lists",
+            "description": "Iterating over lists",
+            "template": "<ul>\r{{#each technologies}}\r   <li>{{name}} ({{description}})</li>\r{{/each}}\r</ul>",
+            "context": {
+                "technologies": [
+                    {
+                        "name": "Backbone.js",
+                        "description": "MV* framework"
+                    },
+                    {
+                        "name": "Underscore.js",
+                        "description": "Utility library"
+                    },
+                    {
+                        "name": "Python",
+                        "description": "Programming language"
+                    },
+                    {
+                        "name": "LOLCODE",
+                        "description": "Esoteric programming language"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 5,
+            "name": "With",
+            "description": "Using with",
+            "template": "<h1>{{title}}</h1>\r\r{{#with author}}\r  <h2>By {{firstName}} {{lastName}}</h2>\r{{/with}}\r\r{{#with info}}\r  <h3>{{publisher}} ({{pages}} pages), {{publicationDate}}</h3>\r  <h4>ISBN: {{ISBN-10}}</h4>\r{{/with}}",
+            "context": {
+                "title": "Secrets of the JavaScript Ninja",
+                "author": {
+                    "firstName": "John",
+                    "lastName": "Resig"
+                },
+                "info": {
+                    "pages": 300,
+                    "publisher": "Manning",
+                    "publicationDate": "14 Jan 2013",
+                    "ISBN-10": "193398869X"
+                }
+            }
+        },
+        {
+            "id": 4,
+            "name": "Unless",
+            "description": "Using unless",
+            "template": "<button class='disabled-btn' {{#unless enabled}}disabled{{/unless}}>A button{{#unless enabled}} (but it's disabled!){{/unless}}</button>",
+            "context": {
+                "enabled": false
+            },
+            "altContext": {
+                "enabled": true
+            }
+        },
+        {
+            "id": 6,
+            "name": "Helper",
+            "description": "Using helpers",
+            "template": "<h1>Zoo</h1>\r<ul>\r  {{#each zoo.animals}}\r    <li>{{@key}} (<em>{{this}}</em>)</li>\r  {{/each}}\r</ul>\r\r<p>Total: <em>{{total zoo.animals}}</em></p>",
+            "context": {
+                "zoo": {
+                    "animals": {
+                        "lions": 5,
+                        "zebras": 3,
+                        "penguins": 23,
+                        "lemurs": 17
+                    }
+                }
+            }
+        },
+        {
+            "id": 8,
+            "name": "PBJ",
+            "description": "Peanut butter jelly time!",
+            "template": "{{#pbj peanutButter jelly}}\r  <p><img src=\"img/banana.gif\"\/></p>\r{{else}}\r  <p>nope :(</p>\r{{/pbj}}",
+            "context": {
+                "peanutButter": true,
+                "jelly": true
+            },
+            "altContext": {
+                "peanutButter": false,
+                "jelly": true
+            }
+        },
+        {
+            "id": 7,
+            "name": "Flickr",
+            "description": "Experimental async",
+            "template": "{{{flickr searchTerm}}}",
+            "context": {
+                "searchTerm": "peanut butter jelly time"
+            }
+        }
+    ]
+}
