@@ -69,7 +69,6 @@ define(function (require) {
             this.currentExample = example;
 
             this.render();
-            
         },
 
         findById: function (id, example) {
