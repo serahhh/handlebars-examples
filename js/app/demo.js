@@ -7,7 +7,6 @@ define(function (require) {
     var Demo = {
 
         init: function (options) {
-            console.log('init!');
             this.$el = $(options.selector);
 
             this.examples = $.parseJSON(examples).examples;

@@ -28,8 +28,6 @@ define(function (require) {
                 searchTerm: Utils.sanitise(searchTerm)
             });
 
-        console.log(options);
-
         deferred.done(function (url) {
             var img = document.createElement('img');
 
